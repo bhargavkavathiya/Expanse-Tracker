@@ -1,0 +1,9 @@
+.main_Div {
+    background-color: purple;
+    border: 2px solid black;
+    width: 77%;
+    float: right;
+    margin: 15px;
+    height: 95vh;
+    border-radius: 20px;
+}
