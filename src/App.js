@@ -1,19 +1,14 @@
-import HomePage from './HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Sidebar from './Sidebar';
-import MainContainer from './MainContainer';
+import Sidebar from './Sidebar/Sidebar';
+import MainContainer from './MainContainer/MainContainer';
+import './App.css'
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <HomePage />
-        <MainContainer>
-        <Routes>
-          <Route path='/' element={<h1>DEMO</h1>} />
-          <Route path='/home' element={<Sidebar/>} />
-        </Routes>
-        </MainContainer>
+        <Sidebar />
+        <MainContainer />
       </BrowserRouter>
     </>
   );
