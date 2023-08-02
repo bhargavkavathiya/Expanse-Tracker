@@ -26,7 +26,7 @@
 }
 
 .db_historyDivItem {
-    border: 2px solid green;
+    border: 2px solid ;
     /* height: 55px; */
     /* display: grid; */
     /* grid-template-columns: 50px auto 50px; */
@@ -37,13 +37,21 @@
     margin: 10px;
     background-color: #f9eded;
 }
-
-.db_historyDivItem span {
+#db_itemTitle{
+    flex: 1 1;
+    flex-wrap: wrap;
+    padding-left: 12px;
+    font-size: large;
+}
+#db_endItem{
+    font-size: large;
+}
+/* .db_historyDivItem span {
     flex: 1 1;
     flex-wrap: wrap;
     padding-left: 7px;
     font-size: large;
-}
+} */
 
 .db_totalIncome {
     grid-row: 4 / 5;
@@ -53,10 +61,15 @@
     height: 80px;
     margin-top: 10px;
     margin-left: 20px;
-    border-radius: 15px;
-    background-color: #fff;
+    color:#ffff;
+    background-color: green;
+    transition: all 0.3s ease-in-out;
 }
-.db_totalExpance {
+.db_totalIncome:hover{
+    /* color: red; */
+    background-color: rgb(2, 93, 2);
+}
+.db_totalexpense {
     grid-row: 4 / 5;
     grid-column: 3 / 4;
     border: 2px solid black;
@@ -64,10 +77,16 @@
     height: 80px;
     margin-right: 20px;
     margin-top: 10px;
-    border-radius: 15px;
-    background-color: #fff;
+    /* border-radius: 15px; */
+    /* background-color: #fff; */
+    color:#ffff;
+    background-color: red;
+    transition: all 0.3s ease-in-out;
 }
-
+.db_totalexpense:hover{
+    /* color: red; */
+    background-color: #cc0000;
+}
 .db_Total {
     grid-row: 5 / 6;
     grid-column: 2 / 3;
@@ -75,7 +94,7 @@
     width: 150px;
     height: 80px;
     margin-left: 20px;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     background-color: #fff;
 }
 
@@ -85,6 +104,10 @@
 
 }
 
+.db_Print{
+    grid-row: 5 / 6;
+    grid-column: 3 / 4;
+}
 .db_span p {
     font-weight: bold;
     font-size: larger;

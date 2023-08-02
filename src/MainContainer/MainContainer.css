@@ -4,10 +4,11 @@
     border: 2px solid black;
     width: 77%;
     float: right;
-    margin: 15px;
+    margin: 15px 7px 15px 0px;
     height: 95vh;
     border-radius: 20px;
     /* box-sizing: border-box; */
     overflow: auto;
-    box-shadow: 0px 7px 10px 8px #888888;
+    /* box-shadow: 0px 2px 2px 3px #888888; */
+    flex-wrap: wrap;
 }

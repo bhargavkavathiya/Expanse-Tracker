@@ -18,7 +18,7 @@
 }
 .exp_parentDiv{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 15vh);
     margin-top: 20px;
 }
@@ -33,7 +33,7 @@
     border: 2px solid black;
     border-radius: 10px;
     margin: 15px;
-    width: 65%;
+    width: 80%;
 }
 .exp_Div input{
     height: 30px;
@@ -58,7 +58,7 @@
     background-color: white;
 
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(9,1fr);
     grid-template-rows: repeat(2,auto);
 }
 /* .exp_historyDivItem span { */
@@ -87,20 +87,20 @@
     align-self: center;
 }
 .exp_IncomeDate{
-    grid-column: 3 / 4;
+    grid-column: 3 / 5;
     grid-row: 2 / 3;
     display: flex;
     align-self: center;
 }
 .exp_IncomeDescription{
-    grid-column: 4 / 8;
+    grid-column: 5 / 9;
     grid-row: 2 / 3;
     padding-left: 10px;
     display: flex;
     align-self: center;
 }
 .exp_endItem{
-    grid-column: 8 / 9;
+    grid-column: 9 / 10;
     grid-row: 1 / 3;
     justify-self: center;
     align-self: center;
