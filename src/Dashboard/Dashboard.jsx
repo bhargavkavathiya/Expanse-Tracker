@@ -7,29 +7,30 @@ import { GiTakeMyMoney } from 'react-icons/gi';
 import './Dashboard.css'
 import { Button } from "@mui/material";
 import { useGlobalContext } from "../Context/GlobalContext";
+import { useNavigate } from "react-router-dom";
 function Dashboard() {
+    const navigate=useNavigate();
+    const { TotalIncome, TotalExpance, getIncome, getExpance, TransactionHistory,Incomes,Expances } = useGlobalContext();
+
     const [userData, setUserData] = useState({
-        labels: Data.map((item) => item.date),
+        labels: TransactionHistory().map((item) => item.date),
         datasets: [{
             label: "Income",
-            data: Data.map((item) => item.income),
+            data: Incomes.map((item) => item.amount),
             backgroundColor: ['green'],
             borderColor: "green",
             borderWidth: 2,
         },
         {
             label: "expense",
-            data: Data.map((item) => item.expance),
+            data: Expances.map((item) => item.amount),
             backgroundColor: ['red'],
             borderColor: "red",
             borderWidth: 2,
         }]
     })
 
-    const { TotalIncome, TotalExpance, getIncome, getExpance, TransactionHistory } = useGlobalContext();
     useState(() => {
-        // TotalIncome();
-        // TotalExpance();
         getIncome();
         getExpance();
     }, [])
@@ -44,7 +45,7 @@ function Dashboard() {
                     <div className="db_header">Recent History</div>
                     {
                         TransactionHistory().map((item) => (
-                            <div className="db_historyDivItem" style={{color:item.id==='inc'?'green':'red' ,borderColor:item.id=='inc'?'green':'red'}}>
+                            <div className="db_historyDivItem" key={item._id} style={{color:item.id==='inc'?'green':'red' ,borderColor:item.id=='inc'?'green':'red'}}>
                                 {item.id==='inc'? 
                                 <FaMoneyBillWave size={29} className="db_startItem" />:
                                 <GiTakeMyMoney size={29} className="db_startItem" />

@@ -1,11 +1,12 @@
 .main_Div {
     background-color: #E4A5FF;
+    /* background-color: #FCF6F9; */
     /* background-color: #FFD1DA; */
     border: 2px solid black;
     width: 77%;
     float: right;
     margin: 15px 7px 15px 0px;
-    height: 95vh;
+    min-height: 95vh;
     border-radius: 20px;
     /* box-sizing: border-box; */
     overflow: auto;

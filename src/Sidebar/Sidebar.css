@@ -5,7 +5,7 @@ body{
     /* background-color: #FFD1DA; */
     background-color: #E4A5FF;
     border: 2px solid black;
-    height: 95vh;
+    min-height: 95vh;
     width: 18%;
     margin: 15px;
     border-radius: 20px;
@@ -74,9 +74,11 @@ body{
 }
 .sb_Signout{
     display: flex;
-    position: absolute;
-    bottom: 45px;
-    left: 30px;
+    /* position: relative;
+    left: 1vw;
+    top: 20vh; */
     width: fit-content;
     font-size: medium;
+    margin: 20vh 0 2vh 1vw;
+    cursor: pointer;
 }

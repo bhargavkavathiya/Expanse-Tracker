@@ -1,0 +1,101 @@
+.log_ParentDiv{
+    background-image: url('../Assets/Background4.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    min-height: 100vh;
+    width: 100vw;
+    /* background-color: rgb(169, 126, 176); */
+}
+.log_mainDiv{
+    /* border: 2px solid black; */
+    width: 65vw;
+    margin: auto;
+    min-height: 75vh;
+    position: relative;
+    top: 78px;
+    display: flex;
+    background-color: rgb(241, 223, 242);
+    border-radius: 25px;
+    /* box-shadow: 0 10px 20px 15px rgba(96, 6, 82,1); */
+    /* box-shadow: 0 14px 28px rgba(0,0,0,1) ; */
+}
+.log_Img{
+    text-align: center;
+    background-image: url('../Assets/ani_bg.jpg');
+    background-size: cover;
+    height: 71vh;
+    width: 30vw;
+    margin-top: 2vh;
+    mix-blend-mode: darken;
+    animation: ani 15s infinite ease;
+}
+@keyframes ani {
+    0%{
+        background-image: url('../Assets/ani_bg.jpg');
+    }
+    50%{
+        background-image: url('../Assets/ani_bg1.avif');
+    }
+    75%{
+        background-image: url('../Assets/ani_bg2.avif');
+    }
+    100%{
+        background-image: url('../Assets/ani_bg.jpg');
+    }
+
+}
+@keyframes Slide_Up{
+    0%{
+        transform: translateY(250px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes Slide_Left {
+    0%{
+        transform: translateX(-250px);
+    }
+    100%{
+        transform: translateX(0);
+        
+    }
+}
+.log_Div{
+    text-align: center;
+    width: 50%;
+    /* margin-top: 15vh; */
+}
+.log_Div h2{
+    margin-top: 9vh;
+    animation: Slide_Left 1.4s ease;
+}
+.log_input input{
+    width: 350px;
+}
+.log_input{
+    margin: 20px;
+    animation: Slide_Up 1.4s ease;
+}
+.log_submit button{
+    background-color: blueviolet;
+    border: 1px solid black;
+    color: white;
+    width: 10vw;
+    animation: Slide_Up 1.6s ease;
+}
+.log_submit  button:hover{
+    background-color: purple;
+    color: white;
+}
+.log_submit button:active{
+    transform: scale(0.95);
+}
+#log_wc{
+    text-align: left;
+    padding-left: 3vw;
+    color: purple;
+    margin-top: 7vh;
+    animation: Slide_Left 1.4s ease;
+}

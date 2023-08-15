@@ -13,8 +13,10 @@ export const GlobalProvider = ({ children }) => {
     function addIncome(income){
         const responce=axios.post('http://localhost:5000/api/add-income',income).catch((err)=>{
             console.log(err);
-           });  
-           console.log("Added")
+        });  
+        getIncome();
+        console.log("Added");
+        // console.log("MYY",responce);
     };
 
     function getIncome(){
@@ -47,7 +49,8 @@ export const GlobalProvider = ({ children }) => {
     function addExpance(expance){
         const responce=axios.post('http://localhost:5000/api/add-expance',expance).catch((err)=>{
             console.log(err);
-           });  
+           });
+           getExpance();
            console.log("Added")
     };
 
@@ -93,7 +96,7 @@ export const GlobalProvider = ({ children }) => {
             Expances,
             TotalExpance,
             DeleteExpance,
-            TransactionHistory
+            TransactionHistory,
 
         }}>
             {children}

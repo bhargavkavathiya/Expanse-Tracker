@@ -1,0 +1,107 @@
+.sign_ParentDiv{
+    background-image: url('../Assets/Background4.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    min-height: 100vh;
+    width: 100vw;
+    /* background-color: rgb(169, 126, 176); */
+}
+.sign_mainDiv{
+    /* border: 2px solid black; */
+    width: 65vw;
+    margin: auto;
+    min-height: 75vh;
+    position: relative;
+    top: 78px;
+    display: flex;
+    background-color: rgb(241, 223, 242);
+    border-radius: 25px;
+    /* box-shadow: 0 10px 20px 15px rgba(96, 6, 82,1); */
+}
+.sign_Img{
+    /* border: 2px solid black; */
+    text-align: center;
+    background-image: url('../Assets/ani_bg.jpg');
+    background-size: cover;
+    height: 71vh;
+    width: 30vw;
+    margin-top: 2vh;
+    mix-blend-mode: darken;
+    animation: ani 15s infinite ease;
+}
+@keyframes ani {
+    0%{
+        background-image: url('../Assets/ani_bg.jpg');
+    }
+    50%{
+        background-image: url('../Assets/ani_bg1.avif');
+    }
+    75%{
+        background-image: url('../Assets/ani_bg2.avif');
+    }
+    100%{
+        background-image: url('../Assets/ani_bg.jpg');
+    }
+
+}
+@keyframes Slide_Up{
+    0%{
+        transform: translateY(250px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes Slide_Left {
+    0%{
+        transform: translateX(-250px);
+    }
+    100%{
+        transform: translateX(0);
+        
+    }
+}
+/* .sign_Img img{
+    width: 95%;
+    height: 95%;
+    padding-top: 2vh;
+    mix-blend-mode: darken;
+} */
+.sign_Div{
+    /* display: block; */
+    /* margin: auto; */
+    text-align: center;
+    width: 50%;
+    padding-top: 7vh;
+    /* border: 2px solid black; */
+    overflow: hidden;
+}
+.sign_Div h2{
+    animation: Slide_Left 1.4s ease;
+}
+.sign_input input{
+    width: 350px;
+}
+.sign_input{
+    margin: 20px;
+    animation: Slide_Up 1.4s ease;
+}
+.sign_submit button{
+    background-color: blueviolet;
+    border: 1px solid black;
+    color: white;
+    width: 10vw;
+    animation: Slide_Up 1.9s ease;
+}
+.sign_submit  button:hover{
+    background-color: purple;
+    color: white;
+}
+.sign_submit button:active{
+    transform: scale(0.95);
+}
+.sign_DirectLogin{
+    padding-top:5vh;
+    animation: Slide_Up 2.1s ease;
+}

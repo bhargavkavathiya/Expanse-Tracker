@@ -6,8 +6,8 @@ import { RxDotFilled } from 'react-icons/rx';
 import axios from 'axios';
 import './Income.css';
 import { useGlobalContext } from "../Context/GlobalContext";
-// import ReactDatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 function Income() {
     const [title, setTitle] = useState('');
     const [amount, setAmount] = useState('');
@@ -55,7 +55,8 @@ function Income() {
                         <TextField placeholder="Amount" type="number" size="small" fullWidth value={amount} onChange={(e) => setAmount(e.target.value)} />
                     </div>
                     <div className="inc_Div">
-                        <TextField placeholder="Date" type="Date" size="small" fullWidth value={date} onChange={(e) => setDate(e.target.value)} />
+                        <DatePicker selected={date} onChange={(date) => setDate(date)} />
+                        {/* <TextField placeholder="Date" type="Date" size="small" fullWidth value={date} onChange={(e) => setDate(e.target.value)} /> */}
                     </div>
                     <div className="inc_Div">
                         <TextField placeholder="Description" type="text" size="small" fullWidth value={description} onChange={(e) => setDescription(e.target.value)} />
@@ -66,6 +67,7 @@ function Income() {
                 </div>
 
                 <div className="inc_historyDiv">
+
                     {
                         Incomes.map((item,i) => (
                             <div className="inc_historyDivItem" key={i}>

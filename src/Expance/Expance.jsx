@@ -5,6 +5,8 @@ import { GiTakeMyMoney } from 'react-icons/gi';
 import { RxDotFilled } from 'react-icons/rx';
 import './Expance.css';
 import { useGlobalContext } from "../Context/GlobalContext";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function Expance() {
     const [title, setTitle] = useState('');
@@ -29,7 +31,7 @@ function Expance() {
 
     useEffect(() => {
         getExpance();
-    }, []);
+    }, [Button]);
 
     return (
         <>
@@ -48,7 +50,8 @@ function Expance() {
                         <TextField placeholder="Amount" type="number" size="small" fullWidth value={amount} onChange={(e) => setAmount(e.target.value)}/>
                     </div>
                     <div className="exp_Div">
-                        <TextField placeholder="Date" type="Date" size="small" fullWidth value={date} onChange={(e) => setDate(e.target.value)}/>
+                        <DatePicker selected={date} onChange={(date) => setDate(date)} dateFormat="dd"/>
+                        {/* <TextField placeholder="Date" type="Date" size="small" fullWidth value={date} onChange={(e) => setDate(e.target.value)}/> */}
                     </div>
                     <div className="exp_Div">
                         <TextField placeholder="Description" type="text" size="small" fullWidth value={description} onChange={(e) => setDescription(e.target.value)}/>
